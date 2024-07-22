@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations -Transform</title>
+    <style>
+    .container{
+        align-self: center;
+        align-content: center;
+        margin-top: 50%;
+        margin-left: 50%;
+    }
+        /* Üzerine gelince hem renk hem boyut değiştirme */
+        .box{
+            width: 150px;
+            height: 150px;
+            font-size: 2rem;
+            background-color: orange;    
+           /* burda da ilk açılırken yapabiliriz transform u*/
+           /* transform: translate(100%, 100%); /* Kendi boyutu (100%) kadar aşağı ve sağa kaydır demek*/
+           /* transform-origin: 0 0; /* varsayılan  transform-origin: 50% 50%;*/
+        }
+        .box:hover{
+           /* transform: translate(50px); /* 50px sağa kaydır demek*/ 
+           /* transform: translateX(50px); /* 50px sağa kaydır demek*/ 
+            /*transform: translateY(50px); /* 50px aşağı kaydır */
+           /* transform: translate(50px, 50px); /* hem x hem ye ekseninde kaydırma yapar*/
+            
+           /* transform: translate(100%, 100%); /* Kendi boyutu (100%) kadar aşağı ve sağa kaydır demek*/
+           /* transform: rotate(180deg); /* x ekseninde 180 derece saat yönünde döner.*/
+           /* transform: rotate(2turn);  /*2 tur dön demek saat yönünde*/
+           /* transform: rotateX(1turn); /* X Ekseninde 1 tur döner*/
+           /* transform: rotateY(-1turn); /* Y Ekseninde 1 tur döner*/
+           /* transform: scaleX(2); /* X exkseninde kendi boyutunun 2 katı büyütür*/
+           /* transform: scaleY(2); /* Y exkseninde kendi boyutunun 2 katı büyütür Merkez orgin değişmez*/
+           /*https://html-css-js.com/css/generator/transform/*/
+           /* transform: skewX(45deg); /* X ekseninde eğim verir */
+           /* transform: skewY(45deg); /* Y ekseninde eğim verir*/
+           transform: rotate(1turn);
+           transition: 6s;/* 2s sürsün*/
+        }
+       
+        
+
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="box">
+        div
+      </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specifity || CSS Selector Advance</title>
+    <style>
+
+     body{
+        font-size: 2rem;
+     }
+     div span{
+        color: red;
+     }
+     span{
+        color: blue !important;
+     }
+    </style>
+</head>
+<body>
+    Daha belirlilik yapmak için 
+    öncelik id ile işaretlemektir.Bundan daha öncelikli olan ise inline style ile bir özellik 
+    vermek en baskın ve geçerli olan olur.Bu birbirini eoverride yani ezme ile ilgilidir
+    <h2>Başlık2</h2>
+    <p>paragraf 1</p>
+    <p>paragraf 2</p>
+    <div>
+        <p>Bu etklenmeyecek</p>
+        <span>
+            Dişardaki span elementi
+            <span>içerdeki span ekelemnti</span>
+        </span>
+    </div>
+
+</body>
+</html>

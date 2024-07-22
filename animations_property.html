@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+    
+        /* Üzerine gelince hem renk hem boyut değiştirme */
+        .container{
+            width: 150px;
+            height: 150px;
+            font-size: 2rem;
+            background-color: orange;    
+
+            animation-name: renk_degistir, boyut_degistir; 
+            animation-duration: 2s; /*Kaç sn kalacağı */
+            animation-timing-function: ease-in; /*Görünme efect şekli */
+            animation-delay: .1s; /* Bekleme süresi */
+            animation-iteration-count: 2; /* Kaç defa çalışacağı*/
+            animation-fill-mode: both; /* Doldurma şekli beraber vs*/
+            animation-direction: alternate; /* Başladıktan sonraki yönü*/
+        }
+        .container:hover{
+           animation-play-state: paused; /* üzerine gelince durdurmak */
+        }
+        @keyframes renk_degistir {
+            from{
+                background-color: blue;
+            }
+            50%{
+                background-color: red;
+            }
+            to{
+                background-color: aquamarine;
+            }
+        }
+
+        @keyframes boyut_degistir {
+            to{
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+      div
+    </div>
+</body>
+</html>

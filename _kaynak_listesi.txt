@@ -1,0 +1,15 @@
+
+
+1-)fonts
+https://fonts.google.com/
+https://glitch.com/~font-display
+
+2-) css tricks
+https://www.tercihyazilim.com/Page/css-seciciler
+https://www.w3schools.com/cssref/css_selectors.php
+https://css-tricks.com/
+https://css-tricks.com/snippets/css/complete-guide-grid/
+
+3-) icon:
+https://materializecss.com/
+https://fontawesome.com/search?o=r&m=free&s=solid

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasyonlar - transition</title>
+    <style>
+        /* örnek 1 -üzerine gelince renk değiştirme
+        .container{
+            width: 150px;
+            height: 150px;
+            font-size: 2rem;
+            background-color: orange;
+            transition: 4s cubic-bezier(0, 0.86, 0.36, 1) 1s;
+            color: white;
+        }
+        .container:hover{
+            width: 150px;
+            height: 150px;
+            background-color: green;
+            color: black;
+        }
+        */
+        /* Üzerine gelince hem renk hem boyut değiştirme */
+        .container{
+            width: 150px;
+            height: 150px;
+            font-size: 2rem;
+            background-color: orange;
+        /* Her birine verilen 2. parametreler(1s,4s) animasyonu bekletme süresidir */ 
+            transition: height 2s 1s, width 2s 4s; 
+        }
+        .container:hover{
+            width: 300px;
+            height: 300px;
+            background-color: teal;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+      div
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Kullanımı</title>
+    <style>
+        @font-face {
+            font-family: salih;
+            src: url('fonts/Mali-Regular.ttf') format('truetype'),
+                url('fonts/Mali-Regular.ttf') format('truetype');
+            /* bulamazsa bu fonto kullan demek */
+            font-weight: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: salih;
+            src: url('fonts/Mali-Bold.ttf') format('truetype'),
+                url('fonts/Mali-Bold.ttf') format('truetype');
+            /* bulamazsa bu fonto kullan demek */
+            font-weight: bold;
+            font-display: swap;
+        }
+
+        body {
+            font-family: salih, arial, sans-serif;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>selam bu bir font</h1>
+    <h2>selam bu bir font</h2>
+    <h3>selam bu bir font</h3>
+    <p>selam bu bir font</p>
+</body>
+
+</html>

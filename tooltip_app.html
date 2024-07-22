@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tooltip_app</title>
+    <link rel="stylesheet" href="css/tooltip_app.css">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin-top: 300px;
+            font-size: 2rem;
+        }
+
+        [data-tooltip]::before,
+        [data-tooltip]::after {
+            position: absolute;
+            left: 50%;
+            --tooltip-color: #333;
+            /* değişken olrak tanımlamak ve aşağıda her yerde kullanmak için */
+            --tooltip-ok-size: 1rem;
+        }
+
+        [data-tooltip] {
+            background-color: red;
+            position: relative;
+            display: inline-block;
+        }
+
+        [data-tooltip]:hover::before {
+            content: attr(data-tooltip);
+            /* atribute değerini direk almak için*/
+            transform: translate(-50%, calc(-100% - var(--tooltip-ok-size)));
+            /* x ekseninde 50%  kaydır y ekseninde ise 110% yukarı kaydır demek */
+            left: 50%;
+            /* yüzde 50 kadar soldan kaydır demek*/
+            background-color: var(--tooltip-color);
+            border-radius: .3rem;
+            color: white;
+            padding: .3rem;
+            width: max-content;
+            max-width: 100%;
+            /* inline elementlerde genişlik yükseklik kullanılmaz boyutu kadar yer kaplar*/
+            /* inle elementleri ya div ile değişrmeliyiz yada onları block şeklinde belirtmeliyiz örnek : 
+            display: inline-block*/
+            text-align: center;
+            /*tooltip içindeki text büyükse ortaya hizalansın*/
+        }
+
+        [data-tooltip]:hover::after {
+            content: '';
+            border: calc(var(--tooltip-ok-size)/ 2) solid transparent;
+            color: white;
+            border-top-color: var(--tooltip-color);
+            top: 0px;
+            width: var(--tooltip-ok-size);
+            height: var(--tooltip-ok-size);
+            transform: translate(-50%, -100%);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <span class="tooltip" data-tooltip="1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5">1-2-3-4-5 1-2-3-4-5
+        1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5 1-2-3-4-5</span>
+</body>
+
+</html>

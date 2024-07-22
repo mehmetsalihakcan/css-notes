@@ -1,0 +1,27 @@
+/*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+*/
+
+:root{
+    --main-color:green;
+    --my-border: 3px solid purple;
+}
+
+h2{
+    background-color: red;
+    color: var(--main-color);
+    border: var(--my-border);
+    padding: .5rem;
+}
+p{
+    --main-color:orange;
+    color: var(--main-color);
+    border: var(--my-border);
+}
+span{
+    color: var(--main-color);
+}

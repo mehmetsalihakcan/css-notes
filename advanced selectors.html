@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>advanced selectors</title>
+    <style>
+            body{
+        font-size: 2rem;
+     }
+     div span{ /* Div elementi içindeki tüm spanlar seçldi */
+        color: red;
+     }
+     div >span{ /* Div in direk çoçuğu olan span ları seçer */
+        color: purple;
+     }
+     div ~ p{ /* Div in kardeşi olan ve div den SONRA GELEN tüm p ler seçilir  */
+        background-color: aquamarine;
+     }
+     div + p{ /* div elementin den hemen sonra gelen kardeş element olan p yi seç BİR TANE SEÇİYOR DİKKAT  */
+       background-color: orange;
+     }
+     p + div{ /* burda da tersi geçerli yani p elementin den hemen sonra gelen kardeş element olan div i seç BİR TANE SEÇİYOR DİKKAT  */
+       background-color: teal;
+     }
+     h2.h2class{ /* sınıfı h2class olanların h2 olan kısmına etki eder */
+        background-color: brown;
+     }
+
+     h2:not(.h2class) { /* sınıfı h2class olanları HARİÇ DİĞER h2 olan kısmına etki eder */
+        background-color: chartreuse;
+     }
+     input:not(:checked){ /* seçili değilse margin 30px olsun */
+        margin: 30px;
+     }
+     input[type="text"]{  /* Sadece type kısmı TEXT olanları sadece geçerli olsun */
+        background-color: red;
+     }
+     input[type]{  /* Sadece type property si TANIMLANANDA olanlarda sadece geçerli olsun */
+        background-color: orange;
+     }
+     input[data-margin="20"]{ /* data-margin  property sine SAHİP olanlara uygula demek  */
+        background-color: aquamarine;
+     }
+     input[deger*="mehmet"]{ /* deger property içinde mehmet GEÇENLERE uygula demek  */
+        background-color: pink;
+     }
+     input[deger^="abc"]{ /* deger property içinde abc ile BAŞLAYANLARA uygula demek  */
+        background-color: burlywood;
+     }
+     input[deger$="eee"]{ /* deger property içinde eee ile BİTENLERE uygula demek  */
+        background-color: grey;
+     }
+     /*https://www.w3schools.com/cssref/css_selectors.php*/
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" />
+    <input type="text" data-margin="20" />
+    <input type="text" deger="mehmet" />
+    <h2>Başlık2</h2>
+    <h2 class="h2class">Başlık2</h2>
+    <p>paragraf 1</p>
+    <p>paragraf 2</p>
+    <div>
+        <p>Bu etklenmeyecek</p>
+        <span>
+            Dişardaki span elementi
+            <span>içerdeki span ekelemnti</span>
+        </span>
+    </div>
+    <p>div in kardeşi</p>
+</body>
+</html>

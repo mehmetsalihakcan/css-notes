@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo elements</title>
+    <style>
+        /* p:: demek pseudo element demek*/
+        p::first-letter{ /* paragrafın ilk karakterine bö özelliği uygula demek*/
+          font-size: 6rem;
+        }
+        p::first-line{ /* bu paragrafın ilk satırına uygula demek*/
+            background-color: aquamarine;
+        }
+        p::selection{  /*ekranda seçilen text in rengini arka planını özel bir renk yapmak istersek nbunu yaparız. */
+            background-color: orange;
+            color: white;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+        .box::before{  /* div elementi içinde bulunan elementlerden ÖNCE birşey eklemek istersek kullanırız.*/
+            display: block;
+            background-color: yellow;
+            content: 'HOŞ GELDİN';
+        }
+        .box::after{ /* div elementi içinde bulunan elementlerden SONRA birşey eklemek istersek kullanırız.*/
+            display: block;
+            background-color: green;
+            content: 'EFENDİ';
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Salih
+    </div>
+    <p>Lorem ipsum hakkında text yazılar.Lorem ipsum hakkında text yazılar.Lorem ipsum hakkında text yazılar.
+        Lorem ipsum hakkında text yazılar.Lorem ipsum hakkında text yazılar.Lorem ipsum hakkında text yazılar.
+        Lorem ipsum hakkında text yazılar.Lorem ipsum hakkında text yazılar.Lorem ipsum hakkında text yazılar.
+    </p>
+</body>
+</html>
